@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto-Sans';
+    min-width: 520px;
+}
+.sticky_header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    background-color: white;
+    height: 50px;
+    top: 0;
+    left: 0;
+}
+.sticky_header > div {
+    align-content: end;
+}
+.sticky_header .area_inner {
+    font-family: 'Impact';
+}
+.sticky_header .area_inner > h1 {
+    margin: 0;
+}
+.sticky_header .area_hummberger {
+    text-align: right;
+}
+.sticky_header .area_hummberger,
+.sticky_header .area_logo {
+    width: 128px;
+}
+.sticky_header .area_hummberger > div {
+    background-color: red;
+    display: inline-block;
+}
+
+.slide {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+.gallery > div {
+    min-width: 200px;
+    min-height: 200px;
+    width: 20vw;
+    height: 20vw;
+    background-color:blueviolet;
+
+}
