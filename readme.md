@@ -7,7 +7,7 @@
     任意のディレクトリで以下のコマンドを実行
 
     ```bash
-    git clone *****
+    git clone https://github.com/logicalAnd-Inc/internship_js.git
     ```
 
 2. nodeのインストール
