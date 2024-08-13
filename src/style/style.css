@@ -34,6 +34,10 @@ body {
     display: inline-block;
 }
 
+#header_title {
+    cursor: pointer;
+}
+
 .slide {
     width: 100%;
     aspect-ratio: 16/9;
