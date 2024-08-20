@@ -26,7 +26,7 @@ function getType(_url) {
 }
 
 const server = http.createServer(function(req, res) {
-    const url = "src" + (req.url.endsWith("/") ? req.url + "index.html" : req.url);
+    const url = "docs" + (req.url.endsWith("/") ? req.url + "index.html" : req.url);
     if (fs.existsSync(url)) {
         fs.readFile(url, (err, data) => {
             if (!err) {
