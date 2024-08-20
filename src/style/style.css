@@ -57,3 +57,59 @@ body {
     background-color:blueviolet;
 
 }
+
+#kail_pull {
+    background-color: cornflowerblue;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    border: none;
+    border-radius: 25px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.arrow_left {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    background: currentColor;
+    position: relative;
+    width: 35px;
+    height: 6px;
+}
+.arrow_left::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 6px solid currentColor;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    box-sizing: border-box;
+}
+
+#kail_window {
+    position: fixed;
+    background-color: cornsilk;
+    right: -300px;
+    bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: black 1px solid;
+    transition: all 0.3s;
+}
+#kail_text {
+    resize: none;
+    height: 80px;
+    width: 200px;
+}
+.kail_button_area {
+    display: flex;
+    justify-content: space-between;
+}
