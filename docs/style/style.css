@@ -113,3 +113,33 @@ body {
     display: flex;
     justify-content: space-between;
 }
+header{
+    position: fixed;
+    top:0px;
+    left:0px;
+    padding:0px 30px;
+    width:100%;
+    height:60px;
+}
+.menu_box{
+    
+    margin: 0px 0px 0 ;
+    text-align: right;
+}
+#toggle{
+    display: none;
+}
+.dropdown_menu{
+    display: none;
+}
+#toggle:checked+.dropdown_menu{
+    display:block;
+}
+.dropdown_menu li{
+    display: block;
+    width: 120px;
+    text-align: center;
+    background-color: white;
+    border: outset 2px;
+    cursor: pointer;
+}

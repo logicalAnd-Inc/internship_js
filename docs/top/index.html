@@ -17,10 +17,15 @@
       <div class="area_inner">
         <h1 id="header_title">LA InternShip Inc.</h1>
       </div>
-      <div class="area_hummberger">
-        <div style="height:50px; width:50px;"></div>
-        <!-- クリックすることでメニューが表示されるボタンを作る -->
-      </div>
+      <div class="menu_box">
+        <label id="menu" for="toggle">MENU</label>
+        <input type="checkbox" id="toggle">
+        <ul class="dropdown_menu">
+         <li><a href='https://example.com/'>ホーム</a></li>
+         <li><a href='https://example.com/'>新規作成</a></li>
+         <li><a href='https://example.com/'>ログアウト</a></li>
+        </ul>
+      </div>   
     </div>
     <div id="container">
       <div class="slide">
@@ -66,6 +71,6 @@
 
   <script src="../script/scroll_top.js"></script>
   <script src="../script/pull_search.js"></script>
-
 </html>
+
 
