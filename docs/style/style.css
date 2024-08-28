@@ -2,8 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Noto-Sans';
-    min-width: 520px;
+    
 }
+
 .sticky_header {
     display: flex;
     position: sticky;
@@ -12,6 +13,7 @@ body {
     height: 50px;
     top: 0;
     left: 0;
+    right: 0;
 }
 .sticky_header > div {
     align-content: end;
@@ -47,17 +49,27 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    
 }
+
 .gallery > div {
     width:calc(25% - 10px);
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
 .gallery img{
-    width:100%;
-    height:auto;
+    max-width:400%;
+    min-height:200%;
+    object-fit: cover;
+    overflow: scroll;
+    display: block;
     cursor:pointer;
+    border:0px solid #ffffff;
+    padding:1px;
+    margin:10px auto;
 }
+
 
 .overlay{
     position:fixed;
@@ -69,13 +81,29 @@ body {
     background-color:rgba(0,0,0,0.8);
     z-index:1000;
     justify-content:center;
+    align-items: center;
 }
 
 .overlay img{
-    max-width:90%;
-    max-height:90%;
+    max-width:80%;
+    max-height:80%;
+    animation: zoomIn 0.5s cubic-bezier(0.33,1,0.68,1)forwards;
+    
 }
-
+    @keyframes zoomIn {
+        0%{
+            transform:scale(0);
+            opacity: 0;
+        }
+        100%{
+            transform:scale(1);
+            opacity: 1;
+        }
+    }
+    
+.no-scroll{
+    overflow: hidden;
+}
 #kail_pull {
     background-color: cornflowerblue;
     position: fixed;
