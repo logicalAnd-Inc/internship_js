@@ -36,9 +36,10 @@
         <div></div>
         <div></div>
       </div>
-      <div class="main">        
-        <div style="background-color:white; color:black; text-align:center; display:inline-block; width:100%; height:1000px; align-content:center;">
-          <img src="https://th.bing.com/th/id/R.206d9c43d9faaca9224d17f8c137add9?rik=ouTODTNX8HyXRg&riu=http%3a%2f%2flivedoor.blogimg.jp%2fbluestylecom-skytree%2fimgs%2fa%2f0%2fa0a62190.jpg&ehk=qUrzQDYjoDMJAfzhc0E4xmJaEuku2ixjM5Zhd%2b7ZV88%3d&risl=&pid=ImgRaw&r=0" wigth="100" height="100"><br>
+      <div class="main">       
+        <div style="background: linear-gradient(to right, rgb(126, 229, 255), rgb(200, 224, 234))rgb(39, 27, 27); text-align:center; display:inline-block; width:100%; height:1000px; align-content:center;">
+          <div style="background-color: #01e8c589; width: 350px; height: 330px; margin: 50px auto; padding: 20px; ">            
+          <img src="https://th.bing.com/th/id/R.206d9c43d9faaca9224d17f8c137add9?rik=ouTODTNX8HyXRg&riu=http%3a%2f%2flivedoor.blogimg.jp%2fbluestylecom-skytree%2fimgs%2fa%2f0%2fa0a62190.jpg&ehk=qUrzQDYjoDMJAfzhc0E4xmJaEuku2ixjM5Zhd%2b7ZV88%3d&risl=&pid=ImgRaw&r=0" wigth="200" height="200"><br>
           スカイツリーは自分何人分?
           <form id="myForm">
             <input type="number" id="hundreds" name="hundreds" max="9" min="0" step="1" placeholder="100の位">
@@ -49,41 +50,10 @@
             <button type="button" id="calculateButton">計算</button>
           </form>
           <div>
-           結果
-          <p id="result"></p>
+          結果          
+          <p id="result">
 
-          <script>
-            document.getElementById('calculateButton').addEventListener('click',function() {
-                        
 
-              var hundreds = document.getElementById('hundreds').value;
-              var tens = document.getElementById('tens').value;
-              var ones = document.getElementById('ones').value;
-              var tenths = document.getElementById('tenths').value;
-              
-              if (hundreds === "" || tens === "" || ones === "" || tenths === "") {
-                document.getElementById('result').textContent = "全ての入力欄に値を入力してください";
-                return;
-              }
-
-              hundreds = parseInt(hundreds);
-              tens = parseInt(tens);
-              ones = parseInt(ones);
-              tenths = parseInt(tenths) / 10;
-              
-              var totalNumber = (hundreds * 100) + (tens * 10) + ones + tenths;
-
-              if (totalNumber === 0) {
-                document.getElementById('result').textContent = "∞";
-                return;
-              }
-
-              var result = 63400 / totalNumber;
-
-              document.getElementById('result').textContent = "スカイツリーはあなたの身長" +result.toFixed(2) + "人分";
-            });            
-              
-          </script>
         </div>
       </div>
       <!-- ヘルプ表示ボタン -->
@@ -108,6 +78,7 @@
 
   <script src="../script/scroll_top.js"></script>
   <script src="../script/pull_search.js"></script>
+  <script src="../script/skytree.js"></script>
 
 </html>
 
