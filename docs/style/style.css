@@ -19,6 +19,10 @@ body {
 }
 .sticky_header .area_inner {
     font-family: 'Impact';
+    position:absolute;
+    right:50px;
+    left:50px;
+    margin 0px 0px 0 calc(80%)
 }
 .sticky_header .area_inner > h1 {
     margin: 0;
@@ -113,4 +117,87 @@ body {
 .kail_button_area {
     display: flex;
     justify-content: space-between;
+}
+header{
+    position: fixed;
+    top:0px;
+    left:0px;
+    padding:0px 30px;
+    width:100%;
+    height:60px;
+}
+.menu_box{
+    margin: 0px 0px 0;
+    text-align: right;
+}
+#toggle{
+    display: none;
+}
+.dropdown_menu{
+    display: none;
+}
+#toggle:checked+.dropdown_menu{
+    display:block;
+}
+.dropdown_menu li{
+    display: block;
+    width: 140px;
+    text-align: center;
+    background-color: white;
+    border: outset 2px;
+    cursor: pointer;
+}
+#menu{
+    position:relative;
+    height:50px;
+    width:50px;
+    display:inline-block;
+    box-sizing:border-box;
+    border: outset rgb(52, 52, 52) 2px;
+}
+
+#menu div{
+    position:absolute;
+    right: 5px;
+    height:2px;
+    width:36px;
+    display:inline-block;
+    border-radius:2px;
+    box-sizing:border-box;
+    background-color:rgb(52, 52, 52);
+}
+.close div:nth-of-type(1){
+    bottom:20px;
+    rotate: 45deg;
+}
+.close div:nth-of-type(2){
+    bottom:20px;
+    rotate:135deg;
+}
+.close div:nth-of-type(3){
+    bottom:20px;
+    rotate:135deg;
+}
+.open div:nth-of-type(1){
+    bottom:34px;
+}
+.open div:nth-of-type(2){
+    bottom:22px;
+}
+.open div:nth-of-type(3){
+    bottom:10px;
+}
+#menu{
+    animation-duration:3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from{
+        margin-gift:100%;
+        width: 300%;
+    }
+    to{
+        margin-left:0%;
+        width:100%;
+    }
 }
